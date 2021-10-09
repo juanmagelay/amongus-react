@@ -1,3 +1,5 @@
+//import hu-logo from './logo.svg';
+
 import React from 'react';
 
 import Container from 'react-bootstrap/Container';
@@ -8,6 +10,7 @@ const HuNavbar = () => {
         <>
         <Navbar bg="light" expand="lg">
                 <Container>
+                    <img src="../assets/img/huron-games-logo.png" alt="Huron logo"/>
                     <p>Hola</p>
                 </Container>
         </Navbar>
