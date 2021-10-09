@@ -5,12 +5,12 @@ import Navbar from 'react-bootstrap/Navbar';
 
 const HuNavbar = () => {
     return (
-    <>
+    
         <Navbar bg="light" expand="lg">
                 <Container>
                 </Container>
         </Navbar>
-    </>
+   
     );
 }; 
 
