@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { HuNavbar } from '../components/HuNavbar';
+import HuNavbar from '../components/HuNavbar';
 
 const Home = () => {
     return (
