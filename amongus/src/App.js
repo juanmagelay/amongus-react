@@ -1,6 +1,6 @@
 //import logo from './logo.svg';
 
-import React, from 'react';
+import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import Home from './pages/Home';
