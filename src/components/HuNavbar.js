@@ -3,6 +3,7 @@ import React from 'react';
 import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
+import HuCartWidget from './HuCartWidget';
 
 const HuNavbar = () => {
     return (
@@ -16,6 +17,7 @@ const HuNavbar = () => {
                             width="50px"
                             height="auto"
                         />
+
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
@@ -23,6 +25,7 @@ const HuNavbar = () => {
                             <Nav.Link href="#home">¿Quiénes somos?</Nav.Link>
                             <Nav.Link href="#amongus">Juego Among Us</Nav.Link>
                             <Nav.Link href="#contact">Contacto</Nav.Link>
+                            <HuCartWidget />
                         </Nav>
                     </Navbar.Collapse>
                 </Container>
