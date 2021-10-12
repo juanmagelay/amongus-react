@@ -1,34 +1,25 @@
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+:root {
+  /*Colors*/
+  --imp-light-blue: #14FBDF;
+  --imp-green: #75FA41;
+  --imp-yellow: #FBE414;
+  --imp-black: #000000;
+  --imp-white: #FFFFFF;
+  --imp-red: #FB1414;
+  --imp-grey: #989898;
+  --imp-grey-blue: #9BACC0;
+  --landing-bg-blue: #3590F3;
+  --landing-bg-pink: #ffb3b3;
+  --landing-orange: #FF7606;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/*Fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Walter+Turncoat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+/*General*/
+body {
+  font-family: 'Walter Turncoat', cursive;
+  color: var(--imp-black);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
