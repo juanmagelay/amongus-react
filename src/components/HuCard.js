@@ -3,15 +3,15 @@ import React from 'react';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 
-const HuCard = () => {
+const HuCard = ( { productImg, productTitle, productDescription, productPrice } ) => {
     return (
         <>
         <Card>
-            <Card.Img variant="top" src="../assets/img/imp-box-2.jpg" />
+            <Card.Img variant="top" src={productImg} />
             <Card.Body>
-                <Card.Title>Juego de mesa</Card.Title>
-                <Card.Text> 2 a 10 jugadores</Card.Text>
-                <Card.Text>$3.950</Card.Text>
+                <Card.Title>{productTitle}</Card.Title>
+                <Card.Text>{productDescription}</Card.Text>
+                <Card.Text>{productPrice}</Card.Text>
                 <Button variant="primary">Comprar</Button>
             </Card.Body>
         </Card>
