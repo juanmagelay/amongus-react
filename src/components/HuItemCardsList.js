@@ -6,6 +6,8 @@ import Col from 'react-bootstrap/Col';
 
 import HuCard from './HuCard';
 
+//paso por props el state que es un array
+
 const HuItemCardsList = () => {
     const productData = [
         {
@@ -27,6 +29,7 @@ const HuItemCardsList = () => {
             productPrice: 650
         }
     ];
+    //Aca va el effect
     return (
         <>
         <Container>
