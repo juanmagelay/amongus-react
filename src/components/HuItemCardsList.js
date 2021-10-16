@@ -12,19 +12,19 @@ const HuItemCardsList = () => {
             productImg: "../assets/img/imp-box-2.jpg",
             productTitle: "Juego de mesa Among Us",
             productDescription: "2 a 10 jugadores",
-            productPrice: "$3.350"
+            productPrice: 3350
         },
         {
             productImg: "../assets/img/imp-cup.png",
             productTitle: "Taza Among Us",
             productDescription: "Modelos a elección",
-            productPrice: "$850"
+            productPrice: 850
         },
         {
             productImg: "../assets/img/imp-figures.jpg",
             productTitle: "3 muñecos 3D Among Us",
             productDescription: "Colores a elección",
-            productPrice: "$650"
+            productPrice: 650
         }
     ];
     return (
@@ -37,7 +37,7 @@ const HuItemCardsList = () => {
                             productImg={items?.productImg} 
                             productTitle={items?.productTitle} 
                             productDescription={items?.productDescription} 
-                            productPrice={items?.productPrice} 
+                            productPrice={'$ ' + items?.productPrice.toLocaleString("es-AR")} 
                         />
                     </Col>
                 ))}
