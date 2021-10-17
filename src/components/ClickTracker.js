@@ -1,10 +1,8 @@
 import React, {useState} from "react";
 
-
 export default function Add1ToCount() {
-    const [click, setClick] = React.useState(0);
-    const [time, setTime] = React.useState(null);
-    const date = new Date();
+    const [click, setClick] = useState(0);
+    const [time, setTime] = useState(null);
     var dayjs = require('dayjs');
     return (
     <div>

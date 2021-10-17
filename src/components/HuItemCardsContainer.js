@@ -1,27 +1,20 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 
 import HuItemCardsList from './HuItemCardsList';
 
-//Promise para obtener los productos
-//Delay de 2000 ms
-
 const HuItemCardsContainer = () => {
-    React.useEffect( () => {
-        const [products, setProducts] = useState([]);
+    const [products, setProducts] = useState([]);
+    useEffect( () => {
         const promise = new Promise( (resolve, reject) => {
-        const products = [
-            <HuItemCardsList.productData/>
-        ];
-        setTimeout(() => {
-            resolve(products)
-        }, 2000);
+            setTimeout(() => {
+                resolve(products)
+            }, 2000); //2000 ms Delay 
         });
-    
         promise.then( (result) => {
-        setProducts(result)
+            setProducts(result) //Promise to obtain products
         });
         },
-        [products] //Se ejecuta cuando haya un cambio en products
+        [products] //It is executed when products change
     );
     return (
         <HuItemCardsList />
