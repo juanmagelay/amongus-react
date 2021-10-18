@@ -35,8 +35,8 @@ const HuItemCardsList = () => {
         <Container>
             <Row className="text-center">     
                 {productData?.map((items) => (
-                    <Col xs={12} md={4}>
-                        <HuCard key={items.id}
+                    <Col xs={12} md={4} key={items?.id}>
+                        <HuCard
                             productImg={items?.productImg} 
                             productTitle={items?.productTitle} 
                             productDescription={items?.productDescription} 
