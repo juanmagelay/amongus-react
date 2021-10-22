@@ -4,20 +4,23 @@ import ItemList from './itemList/ItemList';
 
 const ItemListContainer = (props) => {
     const [products, setProducts] = useState([]);
+    const [loading, setLoading] = useState(true);
     useEffect( () => {
-        const promise = new Promise( (resolve, reject) => {
+        const productList = new Promise( (resolve, reject) => {
             setTimeout(() => {
-                resolve(products)
-            }, 2000); //2000 ms Delay 
+                resolve(productData2)
+            }, 3000); //3000 ms Delay 
         });
-        promise.then( (result) => {
-            setProducts(result) //Promise to obtain products
+        productList.then( (result) => {
+            setProducts(productData2) //Promise to obtain products
+            setLoading(false)
         });
         },
         [products] //It is executed when products change
     );
     return (
         <>
+        {loading ? <h2 className="text-center">Cargando productos</h2> : <p className="text-center">Se cargaron</p>}
         <h1 className="text-center">{props.title}</h1>
         <ItemList />
         </>
