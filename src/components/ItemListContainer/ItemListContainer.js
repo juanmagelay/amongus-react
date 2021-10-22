@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import productData2 from '../data/data.js';
+import productData from '../data/data.js';
 import ItemList from './itemList/ItemList';
 
 const ItemListContainer = (props) => {
@@ -8,11 +8,11 @@ const ItemListContainer = (props) => {
     useEffect( () => {
         const productList = new Promise( (resolve, reject) => {
             setTimeout(() => {
-                resolve(productData2)
+                resolve(productData)
             }, 3000); //3000 ms Delay 
         });
         productList.then( (result) => {
-            setProducts(productData2) //Promise to obtain products
+            setProducts(productData) //Promise to obtain products
             setLoading(false)
         });
         },
@@ -21,7 +21,7 @@ const ItemListContainer = (props) => {
     return (
         <>
         <h1 className="text-center">{props.title}</h1>
-        {loading ? <h2 className="text-center">Cargando productos</h2> : <ItemList />}
+        {loading ? <h2 className="text-center">Cargando productos</h2> : <ItemList products={products}/>}
         </>
     );
 };
