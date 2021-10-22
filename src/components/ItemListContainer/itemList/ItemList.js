@@ -4,9 +4,9 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
-import HuCard from './HuCard';
+import Item from './item/Item';
 
-const HuItemCardsList = () => {
+const ItemList = () => {
     const productData = [
         {
             id: 1,
@@ -36,7 +36,7 @@ const HuItemCardsList = () => {
             <Row className="text-center">     
                 {productData?.map((items) => (
                     <Col xs={12} md={4} key={items?.id}>
-                        <HuCard
+                        <Item
                             productImg={items?.productImg} 
                             productTitle={items?.productTitle} 
                             productDescription={items?.productDescription} 
@@ -50,7 +50,7 @@ const HuItemCardsList = () => {
     );
 }; 
 
-export default HuItemCardsList;
+export default ItemList;
 
 
 

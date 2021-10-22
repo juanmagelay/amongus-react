@@ -3,7 +3,7 @@ import React from 'react';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 
-const HuCard = ( { productImg, productTitle, productDescription, productPrice } ) => {
+const Item = ( { productImg, productTitle, productDescription, productPrice } ) => {
     return (
         <>
         <Card>
@@ -19,4 +19,4 @@ const HuCard = ( { productImg, productTitle, productDescription, productPrice } 
     );
 }; 
 
-export default HuCard;
+export default Item;

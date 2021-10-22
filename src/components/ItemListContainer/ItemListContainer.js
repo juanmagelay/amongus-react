@@ -1,8 +1,8 @@
 import React, {useState, useEffect} from 'react';
+import productData2 from '../data/data.js';
+import ItemList from './itemList/ItemList';
 
-import HuItemCardsList from './HuItemCardsList';
-
-const HuItemCardsContainer = () => {
+const ItemListContainer = (props) => {
     const [products, setProducts] = useState([]);
     useEffect( () => {
         const promise = new Promise( (resolve, reject) => {
@@ -17,8 +17,11 @@ const HuItemCardsContainer = () => {
         [products] //It is executed when products change
     );
     return (
-        <HuItemCardsList />
+        <>
+        <h1 className="text-center">{props.title}</h1>
+        <ItemList />
+        </>
     );
 };
 
-export default HuItemCardsContainer;
+export default ItemListContainer;

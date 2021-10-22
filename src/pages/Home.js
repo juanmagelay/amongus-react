@@ -1,14 +1,14 @@
 import React from 'react';
 
 import HuNavbar from '../components/HuNavbar';
-import HuItemCardsContainer from '../components/HuItemCardsContainer';
+import ItemListContainer from '../components/ItemListContainer/ItemListContainer';
 
 const Home = () => {
     return (
         <>
             <HuNavbar />
-            {/*<HuItemCardsList />   Pongo esto porque se que funciona */}
-            <HuItemCardsContainer /> 
+            {/*<ItemList />   Pongo esto porque se que funciona */}
+            <ItemListContainer title='Nuestros productos' /> 
         </>
     );
 };
