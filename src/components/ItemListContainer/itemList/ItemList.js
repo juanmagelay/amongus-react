@@ -6,7 +6,7 @@ import Col from 'react-bootstrap/Col';
 
 import Item from './item/Item';
 
-const ItemList = () => {
+const ItemList = (products) => {
     const productData = [
         {
             id: 1,

@@ -20,9 +20,8 @@ const ItemListContainer = (props) => {
     );
     return (
         <>
-        {loading ? <h2 className="text-center">Cargando productos</h2> : <p className="text-center">Se cargaron</p>}
         <h1 className="text-center">{props.title}</h1>
-        <ItemList />
+        {loading ? <h2 className="text-center">Cargando productos</h2> : <ItemList />}
         </>
     );
 };
