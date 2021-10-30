@@ -12,7 +12,7 @@ const Item = ( { productImg, productTitle, productDescription, productPrice } ) 
                 <Card.Title>{productTitle}</Card.Title>
                 <Card.Text>{productDescription}</Card.Text>
                 <Card.Text>{productPrice}</Card.Text>
-                <Button className='hu-button-active btn btn-primary btn-lg' variant="primary">Comprar</Button>
+                <Button className='hu-button-active btn btn-primary btn-lg' variant="primary">Ver más</Button>
             </Card.Body>
         </Card>
         </>
