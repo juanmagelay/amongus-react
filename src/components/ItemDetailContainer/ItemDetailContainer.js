@@ -1,3 +1,4 @@
+/*
 import React, {useState, useEffect} from 'react';
 import productData from '../data/data.js';
 import ItemDetail from './ItemDetail/ItemDetail';
@@ -27,3 +28,4 @@ const ItemDetailContainer = (props) => {
 };
 
 export default ItemDetailContainer;
+*/

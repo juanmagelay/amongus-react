@@ -1,3 +1,4 @@
+/*
 import React from "react";
 
 export const ItemDetail = ({ id, name, image, price, long-description} ) => {
@@ -8,3 +9,4 @@ export const ItemDetail = ({ id, name, image, price, long-description} ) => {
         <p>{long-description}</p>
         <h3>{price}</h3>
 }
+*/
