@@ -23,3 +23,8 @@ body {
   color: var(--imp-black);
 }
 
+/*Buttons*/
+.hu-button-active {
+  background-color: var(--landing-orange);
+  border: none;
+}

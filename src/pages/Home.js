@@ -7,7 +7,6 @@ const Home = () => {
     return (
         <>
             <HuNavbar />
-            {/*<ItemList />   Pongo esto porque se que funciona */}
             <ItemListContainer title='Nuestros productos' /> 
         </>
     );

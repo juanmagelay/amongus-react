@@ -11,7 +11,7 @@ const ItemList = ({products}) => {
         <Container>
             <Row className="text-center">     
                 {products?.map((items) => (
-                    <Col xs={12} md={4} key={items?.id}>
+                    <Col className='mb-2' xs={12} md={4} key={items?.id}>
                         <Item
                             productImg={items?.productImg} 
                             productTitle={items?.productTitle} 
