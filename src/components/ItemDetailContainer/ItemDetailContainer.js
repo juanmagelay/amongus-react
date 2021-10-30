@@ -16,12 +16,12 @@ const ItemDetailContainer = (props) => {
             setLoading(false)
         });
         },
-        [products] //It is executed when products change
+        [id] //It is executed when products change
     );
     return (
         <>
         <h1 className="text-center mt-4">{props.title}</h1>
-        {loading ? <h2 className="text-center">Cargando productos</h2> : <ItemDetail products={products}/>}
+        {loading ? <h2 className="text-center">Cargando productos</h2> : <ItemDetail {...item}/>}
         </>
     );
 };

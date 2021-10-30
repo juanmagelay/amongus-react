@@ -5,6 +5,7 @@ import ItemList from './itemList/ItemList';
 const ItemListContainer = (props) => {
     const [products, setProducts] = useState([]);
     const [loading, setLoading] = useState(true);
+    
     useEffect( () => {
         const productList = new Promise( (resolve, reject) => {
             setTimeout(() => {
