@@ -14,6 +14,9 @@ function App() {
       <HuNavbar />
       <BrowserRouter>
         <Switch>
+          <Route exact path='/category'>
+            <h1 className="text-center">Nuestras categorías están en construcción</h1>
+          </Route>
           <Route exact path='/cart'>
             {/*<Cart />*/}
           </Route>
