@@ -6,7 +6,7 @@ import Button from 'react-bootstrap/Button';
 const Item = ( { productImg, productTitle, productDescription, productPrice } ) => {
     return (
         <>
-        <Card>
+        <Card className="shadow">
             <Card.Img variant="top" src={productImg} />
             <Card.Body>
                 <Card.Title>{productTitle}</Card.Title>
