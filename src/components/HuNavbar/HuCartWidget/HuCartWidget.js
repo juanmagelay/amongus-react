@@ -2,9 +2,11 @@ import React from 'react';
 
 import Nav from 'react-bootstrap/Nav';
 
+import '../HuNavbar.css';
+
 const HuCartWidget = () => {
     return (
-        <Nav.Link href="#cart">
+        <Nav.Link className="hu-navbar-option pr-1" href="#cart">
             Mi carrito
             <img
                 alt="Cart"
