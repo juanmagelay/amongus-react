@@ -1,12 +1,10 @@
 import React from 'react';
 
-import HuNavbar from '../components/HuNavbar/HuNavbar';
 import ItemListContainer from '../components/ItemListContainer/ItemListContainer';
 
 const Home = () => {
     return (
         <>
-            <HuNavbar />
             <ItemListContainer title='Nuestros productos' /> 
         </>
     );
