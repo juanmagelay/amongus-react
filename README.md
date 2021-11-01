@@ -28,7 +28,7 @@
 - dateformat para dar formato a las fechas - https://www.npmjs.com/package/dateformat
 
 ## Huron Games en funcionamiento
-![Huron Games en funcionamiento](https://github.com/juanmagelay/amongus-react/huronFuncionamiento.gif)
+![Huron Games en funcionamiento](https://github.com/juanmagelay/amongus-react/blob/master/huronFuncionamiento.gif)
 
 ## Autor
 [@juanmagelay](https://www.github.com/juanmagelay)
