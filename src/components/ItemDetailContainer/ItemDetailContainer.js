@@ -1,31 +1,24 @@
-/*
-import React, {useState, useEffect} from 'react';
-import productData from '../data/data.js';
-import ItemDetail from './ItemDetail/ItemDetail';
+import React, { useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
 
-const ItemDetailContainer = (props) => {
-    const [products, setProducts] = useState([]);
-    const [loading, setLoading] = useState(true);
-    useEffect( () => {
-        const productList = new Promise( (resolve, reject) => {
+import { productData } from '../data/data.js';
+import { ItemDetail } from './ItemDetail/ItemDetail'; 
+
+export const ItemDetailContainer = () => {
+    const [item, setItem] = useState({});
+    const { id } = useParams();
+
+    useEffect(() => {
+        const getItems = new Promise((resolve) => {
             setTimeout(() => {
-                resolve(productData)
-            }, 3000); //3000 ms Delay 
+                resolve(productData);
+              }, 1000);
         });
-        productList.then( (result) => {
-            setProducts(productData) //Promise to obtain products
-            setLoading(false)
-        });
-        },
-        [id] //It is executed when products change
-    );
-    return (
-        <>
-        <h1 className="text-center mt-4">{props.title}</h1>
-        {loading ? <h2 className="text-center">Cargando productos</h2> : <ItemDetail {...item}/>}
-        </>
-    );
-};
 
-export default ItemDetailContainer;
-*/
+        getItems.then((res) => {
+            setItem(res.find((i) => i.id === id));
+          });
+        }, [id]);
+    
+    return <ItemDetail {...item} />;
+};

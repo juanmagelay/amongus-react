@@ -1,11 +1,12 @@
 import React from 'react';
+
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
-import Item from './item/Item';
+import { Item } from './item/Item';
 
-const ItemList = ({products}) => {
+export const ItemList = ( { products } ) => {
     return (
         <>
         <Container>
@@ -13,6 +14,7 @@ const ItemList = ({products}) => {
                 {products?.map((items) => (
                     <Col className='mb-2' xs={12} md={4} key={items?.id}>
                         <Item
+                            id={items?.id}
                             productImg={items?.productImg} 
                             productTitle={items?.productTitle} 
                             productDescription={items?.productDescription} 
@@ -25,8 +27,6 @@ const ItemList = ({products}) => {
         </>
     );
 }; 
-
-export default ItemList;
 
 
 

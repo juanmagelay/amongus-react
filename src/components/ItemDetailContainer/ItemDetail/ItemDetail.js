@@ -1,12 +1,13 @@
-/*
-import React from "react";
+import React from 'react';
 
-export const ItemDetail = ({ id, name, image, price, long-description} ) => {
-
-    return <>
-        <h1>{name}</h1>
-        <img src={image} alt={name} />
-        <p>{long-description}</p>
-        <h3>{price}</h3>
-}
-*/
+export const ItemDetail = ({ id, productTitle, productImg, productPrice }) => {
+  return !id ? (
+    <h1>EL ITEM NO EXISTE</h1>
+  ) : (
+    <>
+      <h1>{productTitle}</h1>
+      <img src={productImg} alt={productTitle} />
+      <p>$ {productPrice}</p>
+    </>
+  );
+};

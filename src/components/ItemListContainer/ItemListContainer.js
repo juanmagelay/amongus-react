@@ -1,8 +1,8 @@
-import React, {useState, useEffect} from 'react';
-import productData from '../data/data.js';
-import ItemList from './itemList/ItemList';
+import React, { useState, useEffect } from 'react';
+import { productData } from '../data/data.js';
+import { ItemList } from './itemList/ItemList';
 
-const ItemListContainer = (props) => {
+export const ItemListContainer = (props) => {
     const [products, setProducts] = useState([]);
     const [loading, setLoading] = useState(true);
     
@@ -26,5 +26,3 @@ const ItemListContainer = (props) => {
         </>
     );
 };
-
-export default ItemListContainer;
