@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 
-export const Item = ( { id, productImg, productTitle, productDescription, productLongDescription, productPrice } ) => {
+export const Item = ( { id, productImg, productTitle, category, productDescription, productPrice } ) => {
     return (
         <>
             <Card className="shadow">

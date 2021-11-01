@@ -2,8 +2,10 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
-import HuNavbar from './components/HuNavbar/HuNavbar';
-import { ItemDetailContainer } from './components/ItemDetailContainer/ItemDetailContainer'; 
+import { HuNavbar } from './components/HuNavbar/HuNavbar';
+import { ItemDetailContainer } from './components/ItemDetailContainer/ItemDetailContainer';
+import { ItemListContainer } from './components/ItemListContainer/ItemListContainer'; 
+
 import Home from './pages/Home';
 /*import ClickTracker from './components/ClickTracker';*/
 
@@ -22,8 +24,8 @@ export default function App() {
             <Home />
           </Route>
 
-          <Route exact path='/category'>
-            <h1 className="text-center">Nuestras categorías están en construcción</h1>
+          <Route path="/category/:catId">
+            <ItemListContainer greeting={'Productos elegidos'} />
           </Route>
           
           <Route exact path='/cart'>

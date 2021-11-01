@@ -10,7 +10,13 @@ import HuCartWidget from './HuCartWidget/HuCartWidget';
 
 import './HuNavbar.css';
 
-const HuNavbar = () => {
+export const HuNavbar = () => {
+    const categories = [
+        { id: '1', address: '/', text: 'Todos los productos' },
+        { id: '2', address: '/category/boardGames', text: 'Juegos de mesa' },
+        { id: '3', address: '/category/merchandising', text: 'Merchandising' }
+      ];
+    
     return (
         <>
         <Navbar bg="light" expand="lg">
@@ -27,9 +33,16 @@ const HuNavbar = () => {
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="ms-auto">
-                            <Nav.Link className="hu-navbar-option" href="#home">¿Quiénes somos?</Nav.Link>
-                            <Nav.Link className="hu-navbar-option" href="#amongus">Juego Among Us</Nav.Link>
-                            <Nav.Link className="hu-navbar-option" href="#contact">Contacto</Nav.Link>
+                            {categories.map((cat) => {
+                                return (
+                                <Nav.Link className="hu-navbar-option" key={cat.id}>
+                                    <NavLink to={cat.address} exact activeClassName="activeClass">
+                                    {cat.text}
+                                    </NavLink>
+                                </Nav.Link>
+                                );
+                            })}
+                        
                             <HuCartWidget />
                         </Nav>
                     </Navbar.Collapse>
@@ -38,5 +51,3 @@ const HuNavbar = () => {
         </>
     );
 }; 
-
-export default HuNavbar;

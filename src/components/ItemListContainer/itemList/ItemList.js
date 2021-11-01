@@ -19,6 +19,7 @@ export const ItemList = ( { products } ) => {
                             productTitle={items?.productTitle} 
                             productDescription={items?.productDescription} 
                             productPrice={'$ ' + items?.productPrice.toLocaleString("es-AR")} 
+                            category={items?.category} 
                         />
                     </Col>
                 ))}

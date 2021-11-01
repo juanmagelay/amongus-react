@@ -5,7 +5,7 @@ import { ItemListContainer } from '../components/ItemListContainer/ItemListConta
 const Home = () => {
     return (
         <>
-            <ItemListContainer title='Nuestros productos' /> 
+            <ItemListContainer greeting={'Todos los productos'} /> 
         </>
     );
 };
