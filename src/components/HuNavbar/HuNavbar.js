@@ -35,11 +35,13 @@ export const HuNavbar = () => {
                         <Nav className="ms-auto">
                             {categories.map((cat) => {
                                 return (
-                                <Nav.Link className="hu-navbar-option" key={cat.id}>
+                                <div className="links" key={cat.id}>
+                                <Nav.Link className="hu-navbar-option">
                                     <NavLink to={cat.address} exact activeClassName="activeClass">
                                     {cat.text}
                                     </NavLink>
                                 </Nav.Link>
+                                </div>
                                 );
                             })}
                         
