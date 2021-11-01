@@ -6,7 +6,7 @@ import '../HuNavbar.css';
 
 const HuCartWidget = () => {
     return (
-        <Nav.Link className="hu-navbar-option pr-1" href="#cart">
+        <Nav.Link className="hu-navbar-option pr-1">
             Mi carrito
             <img
                 alt="Cart"

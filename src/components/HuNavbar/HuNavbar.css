@@ -1,12 +1,11 @@
 .hu-navbar-option {
     font-size: larger;
-}
-
-.links {
     text-decoration: none;
+    color: var(--landing-bg-blue);
 }
   
 .activeClass {
     color: var(--landing-orange);
     text-decoration: none;
+    font-weight: bold;
 }

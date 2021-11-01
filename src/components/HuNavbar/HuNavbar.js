@@ -21,26 +21,25 @@ export const HuNavbar = () => {
         <>
         <Navbar bg="light" expand="lg">
                 <Container>
-                    <Navbar.Brand href="#home">
+                    <Navbar.Brand>
                         <img
                             alt="Huron logo"
                             src="../assets/img/huron-games-logo.png"
                             width="50px"
                             height="auto"
                         />
-
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="ms-auto">
                             {categories.map((cat) => {
                                 return (
-                                <div className="links" key={cat.id}>
-                                <Nav.Link className="hu-navbar-option">
-                                    <NavLink to={cat.address} exact activeClassName="activeClass">
-                                    {cat.text}
-                                    </NavLink>
-                                </Nav.Link>
+                                <div key={cat.id}>
+                                    <Nav.Link>
+                                        <NavLink to={cat.address} exact activeClassName="activeClass" className="hu-navbar-option">
+                                        {cat.text}
+                                        </NavLink>
+                                    </Nav.Link>
                                 </div>
                                 );
                             })}
