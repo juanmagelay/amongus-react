@@ -21,14 +21,16 @@ export const HuNavbar = () => {
         <>
         <Navbar bg="light" expand="lg">
                 <Container>
-                    <Navbar.Brand>
-                        <img
-                            alt="Huron logo"
-                            src="../assets/img/huron-games-logo.png"
-                            width="50px"
-                            height="auto"
-                        />
-                    </Navbar.Brand>
+                    <NavLink to={'/'}>
+                        <Navbar.Brand >
+                            <img
+                                alt="Huron logo"
+                                src="../assets/img/huron-games-logo.png"
+                                width="50px"
+                                height="auto"
+                            />
+                        </Navbar.Brand>
+                    </NavLink>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="ms-auto">
