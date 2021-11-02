@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
+import Spinner from 'react-bootstrap/Spinner';
 
 import { productData } from '../data/data.js';
 import { ItemList } from './itemList/ItemList';
@@ -25,7 +26,7 @@ export const ItemListContainer = ( { greeting } ) => {
     return (
         <>
         <h1 className="text-center mt-4">{greeting}</h1>
-        {loading ? <h2 className="text-center">Cargando productos</h2> : <ItemList products={products}/>}
+        {loading ? <h2 className="text-center">Cargando productos <Spinner animation="border" variant="primary" /></h2> : <ItemList products={products}/>}
         </>
     );
 };
