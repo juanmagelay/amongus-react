@@ -4,10 +4,9 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 import { HuNavbar } from './components/HuNavbar/HuNavbar';
 import { ItemDetailContainer } from './components/ItemDetailContainer/ItemDetailContainer';
-import { ItemListContainer } from './components/ItemListContainer/ItemListContainer'; 
-
+import { ItemListContainer } from './components/ItemListContainer/ItemListContainer';
 import Home from './pages/Home';
-/*import ClickTracker from './components/ClickTracker';*/
+import ClickTracker from './components/ClickTracker';
 
 import './App.css';
 
@@ -33,8 +32,13 @@ export default function App() {
           </Route>
           
           <Route path="/item/:id" component={ItemDetailContainer} />
-          
-          {/*<ClickTracker />*/}
+
+          <Route exact path='*'>
+            <div className="text-center mt-4">
+              <h1 >No se encuentra la página.</h1>
+              <ClickTracker />
+            </div>
+          </Route>          
         
         </Switch>
       
