@@ -13,7 +13,7 @@ export const Item = ( { id, productImg, productTitle, category, productDescripti
                 <Card.Body>
                     <Card.Title>{productTitle}</Card.Title>
                     <Card.Text>{productDescription}</Card.Text>
-                    <Card.Text>{productPrice}</Card.Text>
+                    <Card.Text className="lead">{productPrice}</Card.Text>
                     <Link to={`/item/${id}`}>
                         <Button className='hu-button-active btn btn-primary btn-lg' variant="primary">Ver más</Button>
                     </Link>
