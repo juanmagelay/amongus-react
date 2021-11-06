@@ -33,6 +33,11 @@ body {
   color: var(--landing-orange);
 }
 
+.card-text {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
 .lead {
+  font-family: 'Walter Turncoat', cursive;
   font-weight: bold;
 }
