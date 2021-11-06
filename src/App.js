@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
@@ -7,11 +7,14 @@ import { ItemDetailContainer } from './components/ItemDetailContainer/ItemDetail
 import { ItemListContainer } from './components/ItemListContainer/ItemListContainer';
 import Home from './pages/Home';
 import ClickTracker from './components/ClickTracker';
-import { CartContextProvider } from './context/CartContext';
+import CartContextProvider from './context/CartContext';
 
 import './App.css';
 
 export default function App() {
+  const [isDarkMode, setIsDarkMode] = useState(false);
+  const ThemeContext = React.createContext(false);
+  
   return (
     <>
       <CartContextProvider>
