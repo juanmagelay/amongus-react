@@ -6,8 +6,6 @@ import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import Button from 'react-bootstrap/Button';
 
-import { useCartContext } from "../../../context/CartContext";
-
 import '../../../App.css';
 
 export const ItemDetail = ( { id, productImg, productTitle, productDescription, productLongDescription, productPrice } ) => {
