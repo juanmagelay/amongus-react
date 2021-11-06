@@ -5,9 +5,11 @@ import Card from 'react-bootstrap/Card';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 
+import '../../../App.css';
+
 export const ItemDetail = ( { id, productImg, productTitle, productDescription, productLongDescription, productPrice } ) => {
     return !id ? (
-        <h1 className="text-center mt-4">El producto no existe</h1>
+        <h1 className="text-center mt-4">Cargando producto</h1>
       ) : (
         <> 
         <Container>
@@ -18,9 +20,9 @@ export const ItemDetail = ( { id, productImg, productTitle, productDescription, 
                     </Col>
                     <Col xs={12} md={8}>
                         <Card.Body>
-                            <Card.Title>{productTitle}</Card.Title>
+                            <Card.Title className="display-4">{productTitle}</Card.Title>
                             <Card.Subtitle>{productDescription}</Card.Subtitle>
-                            <Card.Text>{'$ ' + productPrice.toLocaleString("es-AR")}</Card.Text>
+                            <Card.Text className="lead">{'$ ' + productPrice.toLocaleString("es-AR")}</Card.Text>
                             <Card.Text>{productLongDescription}</Card.Text>
                         </Card.Body>
                     </Col>

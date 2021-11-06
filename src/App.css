@@ -28,3 +28,7 @@ body {
   background-color: var(--landing-orange);
   border: none;
 }
+
+.card-title {
+  color: var(--landing-orange);
+}
