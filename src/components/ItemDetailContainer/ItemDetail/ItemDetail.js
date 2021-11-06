@@ -11,6 +11,7 @@ import { useCartContext } from "../../../context/CartContext";
 import '../../../App.css';
 
 export const ItemDetail = ( { id, productImg, productTitle, productDescription, productLongDescription, productPrice } ) => {
+    const product = { id, productImg, productTitle, productDescription, productLongDescription, productPrice };
     return !id ? (
         <h1 className="text-center mt-4">Cargando producto</h1>
       ) : (
