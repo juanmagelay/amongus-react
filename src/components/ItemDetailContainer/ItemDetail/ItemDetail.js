@@ -27,7 +27,7 @@ export const ItemDetail = ( { id, productImg, productTitle, productDescription, 
                             <Card.Subtitle>{productDescription}</Card.Subtitle>
                             <Card.Text className="lead">{'$ ' + productPrice.toLocaleString("es-AR")}</Card.Text>
                             <Card.Text>{productLongDescription}</Card.Text>
-                            <Button className='hu-button-active btn btn-primary btn-lg' variant="primary">Agregar a Mi carrito</Button>
+                            <Button className='hu-button-active btn btn-primary btn-lg' variant="primary" onClick='onClickProduct'>Agregar a Mi carrito</Button>
                         </Card.Body>
                     </Col>
                 </Row>
@@ -36,3 +36,14 @@ export const ItemDetail = ( { id, productImg, productTitle, productDescription, 
         </>
     );
 };
+
+/*
+
+Mejorar aca usando del boton la funcion onClickProduct mirando el codigo del profe
+
+El hizo esta funcion que la puso en la Page Products porque tiene el agregar al carrito directo en su home. Yo tendria que ver donde ponerla.
+
+const onClickProduct = (product) => {
+    setProducts((prev) => [...prev, product]);
+};
+*/
