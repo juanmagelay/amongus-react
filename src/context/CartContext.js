@@ -7,7 +7,7 @@ export default function CartContextProvider ({
 }) {
     const [darkMode, setDarkMode] = React.useState(false);
     const [products, setProducts] = React.useState([]);
-
+    console.log(darkMode, products);
     return (
         <CartContext.Provider value={{
             darkMode,

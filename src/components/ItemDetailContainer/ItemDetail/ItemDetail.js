@@ -27,7 +27,7 @@ export const ItemDetail = ( { id, productImg, productTitle, productDescription, 
                             <Card.Subtitle>{productDescription}</Card.Subtitle>
                             <Card.Text className="lead">{'$ ' + productPrice.toLocaleString("es-AR")}</Card.Text>
                             <Card.Text>{productLongDescription}</Card.Text>
-                            <Button className='hu-button-active btn btn-primary btn-lg' variant="primary" onClick='onClickProduct'>Agregar a Mi carrito</Button>
+                            <Button className='hu-button-active btn btn-primary btn-lg' variant="primary">Agregar a Mi carrito</Button>
                         </Card.Body>
                     </Col>
                 </Row>
