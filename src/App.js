@@ -7,14 +7,14 @@ import { ItemDetailContainer } from './components/ItemDetailContainer/ItemDetail
 import { ItemListContainer } from './components/ItemListContainer/ItemListContainer';
 import Home from './pages/Home';
 import ClickTracker from './components/ClickTracker';
-import CartContext  from './context/CartContext';
+import { CartContextProvider } from './context/CartContext';
 
 import './App.css';
 
 export default function App() {
   return (
     <>
-      <CartContext>
+      <CartContextProvider>
         <BrowserRouter>
           <HuNavbar />
           <Switch>
@@ -36,7 +36,7 @@ export default function App() {
             </Route>          
           </Switch>
         </BrowserRouter>
-      </CartContext>
+      </CartContextProvider>
     </>
   );
 };
