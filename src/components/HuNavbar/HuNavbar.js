@@ -10,7 +10,7 @@ import HuCartWidget from './HuCartWidget/HuCartWidget';
 
 import './HuNavbar.css';
 
-export default function HuNavbar({setCartOpen}) {
+export const HuNavbar = ({setCartOpen}) => {
     const categories = [
         { id: '1', address: '/', text: 'Todos los productos' },
         { id: '2', address: '/category/boardGames', text: 'Juegos de mesa' },
