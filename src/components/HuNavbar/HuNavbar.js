@@ -46,9 +46,10 @@ export default function HuNavbar({setCartOpen}) {
                                 );
                             })}
                         
-                            <HuCartWidget onClick={(e) => {
-                                e.preventDefault();
-                                setCartOpen(true);
+                            <HuCartWidget 
+                                onClick={(e) => {
+                                    e.preventDefault();
+                                    setCartOpen(true);
                                 }} 
                             />
                         </Nav>

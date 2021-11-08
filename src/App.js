@@ -21,7 +21,7 @@ export default function App() {
     <>
       <AppContextProvider>
         <BrowserRouter>
-          <HuNavbar />
+          <HuNavbar setCartOpen={setCartOpen} />
           <Switch>
             <Route exact path='/'>
               <Home />
