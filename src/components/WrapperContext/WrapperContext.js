@@ -1,5 +1,5 @@
 import React from 'react'
-import { CartContextProvider } from 'context/CartContext'
+import { CartContextProvider } from '../../context/CartContext'
 
 const WrapperContext = ({children}) => {
   return (

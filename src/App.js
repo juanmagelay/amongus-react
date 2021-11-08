@@ -20,7 +20,7 @@ export default function App() {
     <>
       <WrapperContext>
         <BrowserRouter>
-          <HuNavbar setCartOpen={setCartOpen} />
+          <HuNavbar />
           <Switch>
             <Route exact path='/'>
               <Home />
