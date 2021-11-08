@@ -8,18 +8,17 @@ import { HuNavbar } from './components/HuNavbar/HuNavbar';
 import { ItemDetailContainer } from './components/ItemDetailContainer/ItemDetailContainer';
 import { ItemListContainer } from './components/ItemListContainer/ItemListContainer';
 
-import ClickTracker from './components/ClickTracker';
-import AppContextProvider from './context/AppContext';
+import ClickTracker from './components/ClickTracker'; 
+import WrapperContext from './components/WrapperContext/WrapperContext';
 
 import './App.css';
 
 export default function App() {
-  const [isDarkMode, setIsDarkMode] = useState(false);
   const ThemeContext = React.createContext(false);
   
   return (
     <>
-      <AppContextProvider>
+      <WrapperContext>
         <BrowserRouter>
           <HuNavbar setCartOpen={setCartOpen} />
           <Switch>
@@ -41,7 +40,7 @@ export default function App() {
             </Route>          
           </Switch>
         </BrowserRouter>
-      </AppContextProvider>
+      </WrapperContext>
     </>
   );
 };
