@@ -2,12 +2,14 @@ import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
+import Home from './pages/Home';
+
 import { HuNavbar } from './components/HuNavbar/HuNavbar';
 import { ItemDetailContainer } from './components/ItemDetailContainer/ItemDetailContainer';
 import { ItemListContainer } from './components/ItemListContainer/ItemListContainer';
-import Home from './pages/Home';
+
 import ClickTracker from './components/ClickTracker';
-import CartContextProvider from './context/CartContext';
+import AppContextProvider from './context/AppContext';
 
 import './App.css';
 
@@ -17,7 +19,7 @@ export default function App() {
   
   return (
     <>
-      <CartContextProvider>
+      <AppContextProvider>
         <BrowserRouter>
           <HuNavbar />
           <Switch>
@@ -39,7 +41,7 @@ export default function App() {
             </Route>          
           </Switch>
         </BrowserRouter>
-      </CartContextProvider>
+      </AppContextProvider>
     </>
   );
 };
