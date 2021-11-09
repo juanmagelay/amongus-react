@@ -3,6 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 import Home from './pages/Home';
+import Cart from './pages/Cart';
 
 import { HuNavbar } from './components/HuNavbar/HuNavbar';
 import { ItemDetailContainer } from './components/ItemDetailContainer/ItemDetailContainer';
@@ -29,7 +30,7 @@ export default function App() {
               <ItemListContainer greeting={'Productos elegidos'} />
             </Route>
             <Route exact path='/cart'>
-              {/*<Cart />*/}
+              <Cart />
             </Route>
             <Route path="/item/:id" component={ItemDetailContainer} />
             <Route exact path='*'>
@@ -37,7 +38,7 @@ export default function App() {
                 <h1 >No se encuentra la página.</h1>
                 <ClickTracker />
               </div>
-            </Route>          
+            </Route>      
           </Switch>
         </BrowserRouter>
       </WrapperContext>

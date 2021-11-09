@@ -11,10 +11,10 @@ export const CartContextProvider = ({ children }) => {
   const [price, setPrice] = useState(0)
   
   // hook para calcular los totales cada vez que cartItems cambia.
-  useEffect(() => {
-    setTotal(handleTotal())
-    setPrice(handleTotalPrice())
-  }, [cartItems])
+  //useEffect(() => {
+  //  setTotal(handleTotal())
+  //  setPrice(handleTotalPrice())
+  //}, [cartItems])
 
   // * Agrego un item al carrito.
   const addItem = (item, count) => {
