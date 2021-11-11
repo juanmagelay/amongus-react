@@ -3,13 +3,12 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 import Home from './pages/Home';
-import Cart from './pages/Cart';
+import { CartFuncion } from './context/CartContext'
 
+import Cart from './components/Cart/Cart';
 import { HuNavbar } from './components/HuNavbar/HuNavbar';
 import { ItemDetailContainer } from './components/ItemDetailContainer/ItemDetailContainer';
 import { ItemListContainer } from './components/ItemListContainer/ItemListContainer';
-import { CartFuncion } from './context/CartContext'
-
 import ClickTracker from './components/ClickTracker'; 
 
 import './App.css';
@@ -19,7 +18,7 @@ function App() {
     <>
         <BrowserRouter>
           <CartFuncion>
-          <HuNavbar />
+            <HuNavbar />
             <Switch>
               <Route exact path='/'>
                 <Home />
