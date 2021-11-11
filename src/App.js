@@ -8,38 +8,40 @@ import Cart from './pages/Cart';
 import { HuNavbar } from './components/HuNavbar/HuNavbar';
 import { ItemDetailContainer } from './components/ItemDetailContainer/ItemDetailContainer';
 import { ItemListContainer } from './components/ItemListContainer/ItemListContainer';
+import { CartFuncion } from './context/CartContext'
 
 import ClickTracker from './components/ClickTracker'; 
 
 import './App.css';
 
-export default function App() {
-  const ThemeContext = React.createContext(false);
-  
+function App() {
   return (
     <>
         <BrowserRouter>
+          <CartFuncion>
           <HuNavbar />
-          <Switch>
-            <Route exact path='/'>
-              <Home />
-            </Route>
-            <Route path="/category/:catId">
-              <ItemListContainer greeting={'Productos elegidos'} />
-            </Route>
-            <Route exact path='/cart'>
-              <Cart />
-            </Route>
-            <Route path="/item/:id" component={ItemDetailContainer} />
-            <Route exact path='*'>
-              <div className="text-center mt-4">
-                <h1 >No se encuentra la página.</h1>
-                <ClickTracker />
-              </div>
-            </Route>      
-          </Switch>
+            <Switch>
+              <Route exact path='/'>
+                <Home />
+              </Route>
+              <Route path="/category/:catId">
+                <ItemListContainer greeting={'Productos elegidos'} />
+              </Route>
+              <Route exact path='/cart'>
+                <Cart />
+              </Route>
+              <Route path="/item/:id" component={ItemDetailContainer} />
+              <Route exact path='*'>
+                <div className="text-center mt-4">
+                  <h1 >No se encuentra la página.</h1>
+                  <ClickTracker />
+                </div>
+              </Route>      
+            </Switch>
+          </CartFuncion>
         </BrowserRouter>
     </>
   );
 };
 
+export default App;

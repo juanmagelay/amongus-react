@@ -8,13 +8,16 @@ import Row from 'react-bootstrap/Row';
 import Button from 'react-bootstrap/Button';
 
 import ItemCount from "../../ItemCount/ItemCount"
+import { Context } from "../../../context/CartContext"
 import '../../../App.css';
 
 export const ItemDetail = ( { id, productImg, productTitle, productDescription, productLongDescription, productPrice, stock } ) => {
     const [buy, setBuy] = useState(false) //Dice si la persona toco en comprar o no
-    
+    const {onAdd} = useContext(Context)
+
     const agregar = (props)=>{
         setBuy(true)
+        onAdd({id,productTitle,productPrice}, props.unidades)
         alert(`Agregaste ${props.unidades} unidades al carrito`)
     }
 
