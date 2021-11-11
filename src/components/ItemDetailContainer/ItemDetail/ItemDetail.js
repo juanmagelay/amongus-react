@@ -4,7 +4,6 @@ import Container from 'react-bootstrap/Container';
 import Card from 'react-bootstrap/Card';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
-import Button from 'react-bootstrap/Button';
 
 import ItemCount from "../../ItemCount/ItemCount"
 import '../../../App.css';
@@ -27,8 +26,7 @@ export const ItemDetail = ( { id, productImg, productTitle, productDescription, 
                             <Card.Subtitle>{productDescription}</Card.Subtitle>
                             <Card.Text className="lead">{'$ ' + productPrice.toLocaleString("es-AR")}</Card.Text>
                             <Card.Text>{productLongDescription}</Card.Text>
-                            <Button className='hu-button-active btn btn-primary btn-lg' variant="primary">Agregar a Mi carrito</Button>
-                            {!buy ? <ItemCount stock={stock} onAdd={agregar}/> : <Link to='/cart'><button>TErminar compra</button></Link>}
+                            <ItemCount />
                         </Card.Body>
                     </Col>
                 </Row>
