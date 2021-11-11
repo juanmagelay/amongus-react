@@ -36,7 +36,7 @@ const ItemCount = (props) =>{
                         </div>
                     </Container>
                 </Row>
-                <Button className='hu-button-active btn btn-primary btn-lg' variant="primary" onClick={()=>props.onAdd({unidades})}>
+                <Button className='hu-button-active btn btn-primary btn-lg' variant="primary" onClick={()=>props.onAdd({unidades})} disabled={unidades === 0}>
                     Agregar a Mi carrito
                 </Button>
             </Container>
