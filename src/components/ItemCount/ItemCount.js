@@ -1,10 +1,8 @@
+import React, {useState} from "react";
+
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
-
-import React, {useState} from "react";
-import { Col } from 'react-bootstrap';
-
 
 const ItemCount = (props) =>{
 
@@ -35,11 +33,11 @@ const ItemCount = (props) =>{
                 <Row className="text-center d-flex justify-content-around">
                     <Container>
                         <p>Stock disponible {stock}</p>
-                        <Col className="text-center d-flex justify-content-center">
+                        <div className="text-center d-flex justify-content-center">
                             <button onClick={handleStock.restaStock} >-</button>
                             <p>{unidades}</p>
                             <button onClick={handleStock.sumaStock} >+</button>
-                        </Col>
+                        </div>
                     </Container>
                 </Row>
                 <Button className='hu-button-active btn btn-primary btn-lg' variant="primary" onClick={()=>props.onAdd({unidades})}>

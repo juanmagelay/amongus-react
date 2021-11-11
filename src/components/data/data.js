@@ -7,7 +7,7 @@ export const productData = [
         productLongDescription: "¡Alerta, hay un impostor entre nosotros! Estás en la nave espacial junto a otros participantes. ¡Pero cuidado!. Uno de ustedes es el impostor e intentará de cualquier manera quitar del medio al resto de la tripulación. ¿Podran detenerlo? Necesitarás un dado, diez muñecos 3D Among Us y un mazo de cartas. Usando estas herramientas y siguiendo las reglas de juego, podrás guiar a tus tripulantes a cumplir misiones o a los impostores a aniquilarlos. ¿Estás listo para llevar a cabo tu misión?",
         productPrice: 3350,
         category: 'boardGames',
-        stock: 10
+        stock: '10'
     },
     {
         id: '2',
@@ -17,7 +17,7 @@ export const productData = [
         productLongDescription: "¡Toma tus infusiones o jugos en tu taza favorita! Ideal para llevar al colegio o jardín. Es de plástico no se calienta al tener una bebida con temperatura.",
         productPrice: 850,
         category: 'merchandising',
-        stock: 10
+        stock: '10'
     },
     {
         id: '3',
@@ -27,6 +27,6 @@ export const productData = [
         productLongDescription: "¿Querés agregar más jugadores a tu juego de mesa? ¿Simplemente querés jugar a tus propias aventuras? Con estos 3 muñecos de 3cm de altura, puedes jugar a abrirlos en 2 y simular el videojuego.",
         productPrice: 650,
         category: 'merchandising',
-        stock: 10
+        stock: '10'
     }
 ];
