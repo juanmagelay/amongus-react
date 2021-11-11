@@ -26,7 +26,7 @@ export const ItemDetail = ( { id, productImg, productTitle, productDescription, 
                             <Card.Subtitle>{productDescription}</Card.Subtitle>
                             <Card.Text className="lead">{'$ ' + productPrice.toLocaleString("es-AR")}</Card.Text>
                             <Card.Text>{productLongDescription}</Card.Text>
-                            <ItemCount />
+                            <ItemCount stock={stock} />
                         </Card.Body>
                     </Col>
                 </Row>
