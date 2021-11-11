@@ -11,17 +11,13 @@ const ItemCount = (props) =>{
 
     const handleStock={
         sumaStock:()=>{
-            if(stock===0){
-                alert('No hay más stock')
-            } else {
+            if(stock>0){
                 setUnidades(unidades+1)
                 setStock(stock-1)
             }
         },
         restaStock:()=>{
-            if(unidades===0){
-                alert('No podés seleccionar menos de 0')
-            } else {
+            if(unidades>0){
                 setUnidades(unidades-1)
                 setStock(stock+1)
             }
@@ -34,9 +30,9 @@ const ItemCount = (props) =>{
                     <Container>
                         <p>Stock disponible {stock}</p>
                         <div className="text-center d-flex justify-content-center">
-                            <button onClick={handleStock.restaStock} >-</button>
+                            <button onClick={handleStock.restaStock} disabled={unidades === 0}>-</button>
                             <p>{unidades}</p>
-                            <button onClick={handleStock.sumaStock} >+</button>
+                            <button onClick={handleStock.sumaStock} disabled={stock === 0}>+</button>
                         </div>
                     </Container>
                 </Row>
