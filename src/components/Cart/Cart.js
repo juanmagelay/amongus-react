@@ -1,23 +1,46 @@
 import React, {useContext} from "react";
 import { Context } from "../../context/CartContext";
 
+import Container from 'react-bootstrap/Container';
+import Card from 'react-bootstrap/Card';
+import Col from 'react-bootstrap/Col';
+import Row from 'react-bootstrap/Row';
+import Button from 'react-bootstrap/Button';
+
 const Cart = ()=>{
     const {cart, unidades, total} = useContext(Context)
 
     return(
         <>
-        <div className="text-center mt-4">
-                  <h1>El total del carrito es {total} y tenes {unidades} productos</h1>
+        <Container className="text-center mt-4 align-self-center">
             {cart.map((item)=>
-                <div>
-                    <h2>Nombre:{item.nombre}</h2>
-                    <h2>Precio:{item.precio}</h2>
-                    <h2>Cantidad:{item.cantidad}</h2>
-                    <h2>Subtotal:{item.subtotal}</h2>
-                    <button>{item.id}</button>
-                </div>
+                <>
+                <Card className="w-100 justify-content-between align-items-center shadow m-2">
+                    <Row className="justify-content-between align-items-center p-2">
+                        <Col xs={12} md={10}>
+                            <h5>Nombre: {item.nombre}</h5>
+                            <p>Precio: {'$' + item.precio.toLocaleString("es-AR")}</p>
+                            <p>Cantidad: {item.cantidad}</p>
+                            <p className="lead">Subtotal: {'$' + item.subtotal.toLocaleString("es-AR")}</p>
+                        </Col>
+                        <Col className="text-center" xs={12} md={2}>
+                            <Button variant="primary">Quitar</Button>
+                        </Col>
+                    </Row>
+                </Card>
+                </>
                 )}
-        </div>
+                <Card className="w-100 justify-content-between align-items-center shadow m-2">
+                    <Row className="justify-content-between align-items-center p-2">
+                        <Col xs={12} md={10}>
+                            <h5>El total del carrito es <span className="lead">{'$' + total.toLocaleString("es-AR")}</span> y tenés {unidades} productos</h5>
+                        </Col>
+                        <Col className="text-center" xs={12} md={2}>
+                            <Button variant=" hu-button-active btn btn-primary btn-lg">Pagar</Button>
+                        </Col>
+                    </Row>
+                </Card>
+        </Container>
         </>
     )
 }

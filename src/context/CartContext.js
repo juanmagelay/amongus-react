@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 
 const Context = React.createContext()
 
@@ -33,4 +33,4 @@ const CartFuncion = ({children}) =>{
     }
 
 
-export {CartFuncion, Context}
+export { CartFuncion, Context }
