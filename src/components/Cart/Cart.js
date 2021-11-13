@@ -18,7 +18,7 @@ const Cart = ()=>{
                 <Card className="w-100 justify-content-between align-items-center shadow m-2">
                     <Row className="justify-content-between align-items-center p-2">
                         <Col xs={12} md={10}>
-                            <h5>Nombre: {item.nombre}</h5>
+                            <h5 className="pt-3">Nombre: {item.nombre}</h5>
                             <p>Precio: {'$' + item.precio.toLocaleString("es-AR")}</p>
                             <p>Cantidad: {item.cantidad}</p>
                             <p className="lead">Subtotal: {'$' + item.subtotal.toLocaleString("es-AR")}</p>
@@ -33,7 +33,7 @@ const Cart = ()=>{
                 <Card className="w-100 justify-content-between align-items-center shadow m-2">
                     <Row className="justify-content-between align-items-center p-2">
                         <Col xs={12} md={10}>
-                            <h5>El total del carrito es <span className="lead">{'$' + total.toLocaleString("es-AR")}</span> y tenés {unidades} productos</h5>
+                            <h5 className="pt-2">El total del carrito es <span className="lead">{'$' + total.toLocaleString("es-AR")}</span> y tenés {unidades} productos</h5>
                         </Col>
                         <Col className="text-center" xs={12} md={2}>
                             <Button variant=" hu-button-active btn btn-primary btn-lg">Pagar</Button>
