@@ -22,14 +22,6 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
+const db = getFirestore(app);
 
-// Method to return Firestore database with config
-const getFirestoreDb = () => {
-    return getFirestore(app);
-}
-
-export {
-    app,
-    getFirestoreDb
-}
+export default db;
