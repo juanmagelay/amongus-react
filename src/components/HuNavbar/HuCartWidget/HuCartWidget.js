@@ -12,8 +12,7 @@ const HuCartWidget = () => {
     return (
         <>
         {unidades>0 ?
-        <Nav.Link className="hu-navbar-option pr-1">
-            <NavLink to='/cart' >
+            <NavLink className="hu-navbar-option pr-1" to='/cart' >
                 Mi carrito ({unidades})
                 <img
                     alt="Cart"
@@ -22,7 +21,7 @@ const HuCartWidget = () => {
                     height="auto"
                 />
             </NavLink>
-        </Nav.Link> :<div></div>}
+        :<div></div>}
         </>
     );
 }; 
