@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Swal from 'sweetalert2'
 
 const Context = React.createContext()
 
@@ -33,6 +34,13 @@ const CartFuncion = ({children}) =>{
         setTotal(total - myItem.subtotal)
         setUnidades(unidades - myItem.cantidad)
         setCart([...cartAux])
+        Swal.fire({
+            position: 'top-end',
+            icon: 'success',
+            title: `Eliminaste el producto del carrito`,
+            showConfirmButton: false,
+            timer: 2000
+          })
     }
     
     return <Context.Provider value={{cart, unidades, total, onAdd, removeItem}}>
