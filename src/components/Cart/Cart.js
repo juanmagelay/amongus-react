@@ -9,7 +9,7 @@ import Row from 'react-bootstrap/Row';
 import Button from 'react-bootstrap/Button';
 
 const Cart = ()=>{
-    const {cart, unidades, total} = useContext(Context)
+    const {cart, unidades, total, removeItem} = useContext(Context)
 
     return(
         <>
@@ -25,7 +25,7 @@ const Cart = ()=>{
                             <p className="lead">Subtotal: {'$' + item.subtotal.toLocaleString("es-AR")}</p>
                         </Col>
                         <Col className="text-center" xs={12} md={2}>
-                            <Button variant="primary">Quitar</Button>
+                            <Button variant="primary" onClick={()=> removeItem(item.id)}>Quitar</Button>
                         </Col>
                     </Row>
                 </Card>

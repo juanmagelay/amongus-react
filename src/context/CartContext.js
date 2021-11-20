@@ -25,9 +25,17 @@ const CartFuncion = ({children}) =>{
             setTotal(total+(producto.productPrice*cantidad))
             setUnidades(unidades+cantidad)
         }
-    } 
+    }
     
-    return <Context.Provider value={{cart, unidades, total, onAdd}}>
+    const removeItem = (id) => {
+        const myItem = cart.find(item => item.id === id)
+        const cartAux = cart.filter(item => item.id !== id) 
+        setTotal(total - myItem.subtotal)
+        setUnidades(unidades - myItem.cantidad)
+        setCart([...cartAux])
+    }
+    
+    return <Context.Provider value={{cart, unidades, total, onAdd, removeItem}}>
         {children}
     </Context.Provider>
 
