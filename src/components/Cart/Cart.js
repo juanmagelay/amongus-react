@@ -15,7 +15,7 @@ const Cart = ()=>{
         <Container className="text-center mt-4 align-self-center">
             {cart.map((item)=>
                 <>
-                <Card className="w-100 justify-content-between align-items-center shadow m-2">
+                <Card className="w-90 justify-content-between align-items-center shadow m-2">
                     <Row className="justify-content-between align-items-center p-2">
                         <Col xs={12} md={10}>
                             <h5 className="pt-3">Nombre: {item.nombre}</h5>
@@ -30,7 +30,7 @@ const Cart = ()=>{
                 </Card>
                 </>
                 )}
-                <Card className="w-100 justify-content-between align-items-center shadow m-2">
+                <Card className="w-90 justify-content-between align-items-center shadow m-2">
                     <Row className="justify-content-between align-items-center p-2">
                         <Col xs={12} md={10}>
                             <h5 className="pt-2">El total del carrito es <span className="lead">{'$' + total.toLocaleString("es-AR")}</span> y tenés {unidades} productos</h5>
