@@ -37,10 +37,8 @@ export const HuNavbar = ({setCartOpen}) => {
                             {categories.map((cat) => {
                                 return (
                                 <div key={cat.id}>
-                                    <Nav.Link>
-                                        <NavLink to={cat.address} exact activeClassName="activeClass" className="hu-navbar-option">
-                                        {cat.text}
-                                        </NavLink>
+                                    <Nav.Link to={cat.address} exact activeClassName="activeClass" className="hu-navbar-option">
+                                    {cat.text}
                                     </Nav.Link>
                                 </div>
                                 );
