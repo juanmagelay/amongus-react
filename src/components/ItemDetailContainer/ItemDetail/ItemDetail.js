@@ -1,5 +1,6 @@
 import React, {useState, useContext} from "react"
 import { Link } from "react-router-dom"
+import Swal from 'sweetalert2'
 
 import Container from 'react-bootstrap/Container';
 import Card from 'react-bootstrap/Card';
@@ -18,7 +19,13 @@ export const ItemDetail = ( { id, productImg, productTitle, productDescription, 
     const agregar = (props)=>{
         setBuy(true)
         onAdd({id,productTitle,productPrice}, props.unidades)
-        alert(`Agregaste ${props.unidades} unidades al carrito`)
+        Swal.fire({
+            position: 'top-end',
+            icon: 'success',
+            title: `Agregaste ${props.unidades} unidades al carrito`,
+            showConfirmButton: false,
+            timer: 2000
+          })
     }
 
     return !id ? (
