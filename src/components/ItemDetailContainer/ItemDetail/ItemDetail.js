@@ -20,7 +20,7 @@ export const ItemDetail = ( { id, productImg, productTitle, productDescription, 
         setBuy(true)
         onAdd({id,productTitle,productPrice}, props.unidades)
         Swal.fire({
-            position: 'top-end',
+            position: 'center',
             icon: 'success',
             title: `Agregaste ${props.unidades} unidades al carrito`,
             showConfirmButton: false,

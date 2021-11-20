@@ -35,7 +35,7 @@ const CartFuncion = ({children}) =>{
         setUnidades(unidades - myItem.cantidad)
         setCart([...cartAux])
         Swal.fire({
-            position: 'top-end',
+            position: 'center',
             icon: 'success',
             title: `Eliminaste el producto del carrito`,
             showConfirmButton: false,
