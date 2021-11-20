@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import Spinner from 'react-bootstrap/Spinner';
 
-import { productData } from '../data/data.js';
+//import { productData } from '../data/data.js';
 import { ItemDetail } from './ItemDetail/ItemDetail';
 
 //Import de db que creamos nosotros
@@ -14,6 +14,7 @@ import { doc, getDoc } from 'firebase/firestore';
 export const ItemDetailContainer = () => {
     const [item, setItem] = useState({});
     const { id } = useParams();
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
         /*
@@ -28,6 +29,7 @@ export const ItemDetailContainer = () => {
             setItem(res.find((i) => i.id === id));
           });
         */
+        setLoading(true);
         const getItems = doc(db, 'productData', id);
     
         // aca usamos el paso intermedio de crear un objeto para agregarle el id de firebase, que viene por afuera de nuestro objeto
@@ -36,7 +38,12 @@ export const ItemDetailContainer = () => {
             const result = { id: res.id, ...res.data() };
             setItem(result);
         })
+            .finally(() => setLoading(false));
         }, []);
     
-    return <ItemDetail {...item} />;
+    return loading ? (
+        <>
+        <h2 className="text-center">Cargando producto <Spinner animation="border" variant="primary" /></h2> 
+        </>
+    ) : (<ItemDetail {...item} />);
 };

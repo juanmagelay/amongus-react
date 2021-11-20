@@ -6,7 +6,6 @@ import Card from 'react-bootstrap/Card';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import Button from 'react-bootstrap/Button';
-import Spinner from 'react-bootstrap/Spinner';
 
 import ItemCount from "../../ItemCount/ItemCount"
 import { Context } from "../../../context/CartContext"
@@ -24,7 +23,7 @@ export const ItemDetail = ( { id, productImg, productTitle, productDescription, 
 
     return !id ? (
         <>
-        <h1 className="text-center mt-4">Cargando producto <Spinner animation="border" variant="primary" /></h1>
+        <div></div>
         </>
       ) : (
         <> 
