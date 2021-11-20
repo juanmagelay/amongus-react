@@ -23,6 +23,7 @@ const CartFuncion = ({children}) =>{
             })
             setCart(cartAux)
             setTotal(total+(producto.productPrice*cantidad))
+            setUnidades(unidades+cantidad)
         }
     } 
     
