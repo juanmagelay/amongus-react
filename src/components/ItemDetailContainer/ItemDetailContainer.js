@@ -32,14 +32,14 @@ export const ItemDetailContainer = () => {
         setLoading(true);
         const getItems = doc(db, 'productData', id);
     
-        // aca usamos el paso intermedio de crear un objeto para agregarle el id de firebase, que viene por afuera de nuestro objeto
+        // Aca usamos el paso intermedio de crear un objeto para agregarle el id de firebase, que viene por afuera de nuestro objeto
         getDoc(getItems)
         .then((res) => {
             const result = { id: res.id, ...res.data() };
             setItem(result);
         })
             .finally(() => setLoading(false));
-        }, []);
+        }, [id]);
     
     return loading ? (
         <>
