@@ -8,7 +8,7 @@ const HuCartWidget = () => {
     return (
         <Nav.Link className="hu-navbar-option pr-1">
             <NavLink to='/cart' >
-                Mi carrito
+                Mi carrito (1)
                 <img
                     alt="Cart"
                     src="../assets/icons/cart.svg"

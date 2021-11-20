@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import Spinner from 'react-bootstrap/Spinner';
 
-import { productData } from '../data/data.js';
+//import { productData } from '../data/data.js';
 import { ItemList } from './itemList/ItemList';
 
 //Import de db que creamos nosotros
