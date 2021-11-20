@@ -2,7 +2,6 @@ import React, {useContext} from "react"
 import { Context } from "../../../context/CartContext"
 
 import { NavLink } from 'react-router-dom';
-import Nav from 'react-bootstrap/Nav';
 
 import '../HuNavbar.css';
 
