@@ -2,6 +2,7 @@
     font-size: larger;
     text-decoration: none;
     color: var(--landing-bg-blue);
+    padding-right: 1rem;
 }
   
 .activeClass {
